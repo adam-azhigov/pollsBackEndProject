@@ -3,4 +3,4 @@ const schema = new Schema({
     pollName: String
 })
 
-module.exports = model('polls', schema)
+module.exports = model('Poll', schema)
