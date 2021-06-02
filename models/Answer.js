@@ -1,4 +1,4 @@
-const Schema = require('mongoose');
+const {Schema, model} =require('mongoose');
 const schema = new Schema({
     title: String,
     poll: {
@@ -7,4 +7,4 @@ const schema = new Schema({
     }
 })
 
-module.exports('answer', schema)
+module.exports('Answer', schema)
