@@ -6,6 +6,7 @@ const todoRoutes = require('./routes/todos')
 
 app.use(todoRoutes);
 
+
 async function start() {
     try {
         await mongoose.connect('mongodb+srv://Mutaliev:Intocode@cluster0.chyad.mongodb.net/pollsBackEnd', {
