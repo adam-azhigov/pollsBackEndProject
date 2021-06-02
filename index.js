@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const mongoose = require('mongoose');
+const todoRoutes = require('./routes/todos')
+
+app.use(todoRoutes);
 
 async function start() {
     try {
@@ -16,3 +19,5 @@ async function start() {
         console.log(e)
     }
 }
+
+start();
