@@ -1,11 +1,12 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const pollsRoutes = require('./routes/polls')
+const Polls = require('../models/Polls')
+const Answer = require('../models/Answer')
 const app = express();
 const port = 3000;
-const mongoose = require('mongoose');
-const pollsRoutes = require('./routes/pollBackEnd')
 
 app.use(pollsRoutes);
-
 
 async function start() {
     try {
