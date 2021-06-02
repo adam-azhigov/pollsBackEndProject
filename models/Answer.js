@@ -1,10 +1,12 @@
-const {Schema, model} =require('mongoose');
+const { Schema, model } = require('mongoose');
 const schema = new Schema({
-    title: String,
+    title: {
+        type: String
+    },
     poll: {
         ref: 'polls',
         type: Schema.Types.ObjectId
     }
 })
 
-module.exports('Answer', schema)
+module.exports = model('Answer', schema)

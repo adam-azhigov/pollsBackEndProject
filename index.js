@@ -1,13 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const pollsRoutes = require('./routes/polls')
+const Polls = require('./models/Poll')
+const Answer = require('./models/Answer')
 const app = express();
 const port = 3000;
 
 app.use(express.urlencoded({extended: true}))
 
 app.use(pollsRoutes);
-
 
 async function start () {
     try {
