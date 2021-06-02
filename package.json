@@ -18,6 +18,14 @@
   },
   "repository": {
     "type": "git",
+
+    "url": "git+https://github.com/abuingush/pollsBackEndProject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abuingush/pollsBackEndProject/issues"
+  },
+  "homepage": "https://github.com/abuingush/pollsBackEndProject#readme",
+
     "url": "git+https://github.com/adam-azhigov/pollsBackEndProject.git"
   },
   "bugs": {
