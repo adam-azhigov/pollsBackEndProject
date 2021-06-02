@@ -2,9 +2,11 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const mongoose = require('mongoose');
+const pollsRoutes = require('./routes/pollBackEnd')
 const Polls = require('../models/Polls')
 const Answer = require('../models/Answer')
 
+app.use(todoRoutes);
 
 app.get('/', async (req, res) => {
     const polls = await Polls.find({}).lean()
@@ -19,7 +21,6 @@ app.post('/post', async (req, res) => {
     res.json(pollPost)
 })
 
-
 async function start() {
     try {
         await mongoose.connect('mongodb+srv://Mutaliev:Intocode@cluster0.chyad.mongodb.net/pollsBackEnd', {
@@ -33,3 +34,5 @@ async function start() {
         console.log(e)
     }
 }
+
+start();
