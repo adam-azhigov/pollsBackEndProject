@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const mongoose = require('mongoose');
-const todoRoutes = require('./routes/todos')
+const pollsRoutes = require('./routes/pollBackEnd')
 
-app.use(todoRoutes);
+app.use(pollsRoutes);
 
 
 async function start() {
