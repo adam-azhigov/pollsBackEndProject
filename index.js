@@ -6,7 +6,7 @@ const pollsRoutes = require('./routes/pollBackEnd')
 const Polls = require('../models/Polls')
 const Answer = require('../models/Answer')
 
-app.use(todoRoutes);
+app.use(pollsRoutes);
 
 app.get('/', async (req, res) => {
     const polls = await Polls.find({}).lean()
